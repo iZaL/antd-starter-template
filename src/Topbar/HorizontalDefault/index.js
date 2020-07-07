@@ -69,26 +69,24 @@ function handleChange(value) {
 const HorizontalDefault = () => {
   const [searchText, setSearchText] = useState("");
   const [drawerState, setDrawerState] = useRecoilState(drawerStateAtom);
-  const locale = {
-    languageId: "english",
-    locale: "en",
-    name: "English",
-    icon: "us"
-  };
 
   const languageMenu = () => (
     <div className="gx-popover-lang-scroll">
       <ul className="gx-sub-popover">
-        {languageData.map(language => (
           <li
             className="gx-media gx-pointer"
-            key={JSON.stringify(language)}
+            key={'EN'}
             onClick={e => {}}
           >
-            <i className={`flag flag-24 gx-mr-2 flag-${language.icon}`} />
-            <span className="gx-language-text">{language.name}</span>
+            <span className="gx-language-text">EN</span>
           </li>
-        ))}
+        <li
+          className="gx-media gx-pointer"
+          key={'AR'}
+          onClick={e => {}}
+        >
+          <span className="gx-language-text">AR</span>
+        </li>
       </ul>
     </div>
   );
@@ -98,7 +96,7 @@ const HorizontalDefault = () => {
   };
 
   return (
-    <div className="gx-header-horizontal  gx-header-horizontal-dark">
+    <div className="gx-header-horizontal gx-header-horizontal-dark">
       <div className="gx-header-horizontal-top">
         <div className="gx-container">
           <div className="gx-header-horizontal-top-flex">
@@ -217,7 +215,7 @@ const HorizontalDefault = () => {
                   trigger="click"
                 >
                   <span className="gx-pointer gx-flex-row gx-align-items-center">
-                    <i className={`flag flag-24 flag-${locale.icon}`} />
+                    EN
                   </span>
                 </Popover>
               </li>
@@ -228,7 +226,7 @@ const HorizontalDefault = () => {
           </div>
         </div>
       </Header>
-      <div className="gx-header-horizontal-nav gx-header-horizontal-nav-curve gx-d-none gx-d-lg-block">
+      <div className="gx-header-horizontal-nav gx-d-none gx-d-lg-block">
         <div className="gx-container">
           <div className="gx-header-horizontal-nav-flex">
             <HorizontalNav />

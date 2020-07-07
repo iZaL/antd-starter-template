@@ -3,7 +3,6 @@ import { Menu } from "antd";
 import IntlMessages from "util/IntlMessages";
 
 const SubMenu = Menu.SubMenu;
-const MenuItemGroup = Menu.ItemGroup;
 
 const HorizontalNav = () => {
   return (
@@ -13,7 +12,7 @@ const HorizontalNav = () => {
       mode="horizontal"
     >
       <SubMenu
-        className='gx-menu-horizontal'
+        // className='gx-menu-horizontal'
         key="main"
         title={<IntlMessages id="sidebar.main" />}
       >
@@ -54,7 +53,7 @@ const HorizontalNav = () => {
       </SubMenu>
 
       <SubMenu
-        className='gx-menu-horizontal'
+        // className='gx-menu-horizontal'
         key="in-built-apps"
         title={<IntlMessages id="sidebar.inBuiltApp" />}
       >
@@ -68,7 +67,7 @@ const HorizontalNav = () => {
       </SubMenu>
 
       <SubMenu
-        className='gx-menu-horizontal'
+        // className='gx-menu-horizontal'
         key="components"
         title={<IntlMessages id="sidebar.components" />}
       >
