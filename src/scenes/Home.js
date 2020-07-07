@@ -1,9 +1,9 @@
-import React from "react";
-import { Layout } from "antd";
-import HorizontalDefault from "components/Topbar/HorizontalBar";
-import Sidebar from "components/Sidebar/index";
+import React from 'react';
+import {Layout} from 'antd';
+import HorizontalDefault from 'components/Topbar/HorizontalBar';
+import Sidebar from 'components/Sidebar/index';
 
-const { Content, Footer } = Layout;
+const {Content, Footer} = Layout;
 
 const Home = () => {
   return (

@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 
-import SidebarLogo from "components/Sidebar/SidebarLogo";
+import SidebarLogo from 'components/Sidebar/SidebarLogo';
 
 const SidebarContent = () => {
   return (

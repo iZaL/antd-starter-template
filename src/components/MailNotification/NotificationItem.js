@@ -1,8 +1,8 @@
-import React from "react";
-import { Avatar } from "antd";
+import React from 'react';
+import {Avatar} from 'antd';
 
-const NotificationItem = ({ notification }) => {
-  const { image, badge, name, time, message } = notification;
+const NotificationItem = ({notification}) => {
+  const {image, badge, name, time, message} = notification;
   return (
     <li className="gx-media">
       <div className="gx-user-thumb gx-mr-3">

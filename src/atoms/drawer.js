@@ -1,10 +1,10 @@
-import { atom } from "recoil";
+import {atom} from 'recoil';
 
 const drawer = atom({
-  key: "drawerState",
+  key: 'drawerState',
   default: {
-    open:false
-  }
+    open: false,
+  },
 });
 
 export default drawer;

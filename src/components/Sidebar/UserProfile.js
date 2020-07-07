@@ -1,5 +1,5 @@
-import React from "react";
-import { Avatar, Popover } from "antd";
+import React from 'react';
+import {Avatar, Popover} from 'antd';
 
 const UserProfile = () => {
   const userMenuOptions = (
@@ -14,8 +14,7 @@ const UserProfile = () => {
       <Popover
         placement="bottomRight"
         content={userMenuOptions}
-        trigger="click"
-      >
+        trigger="click">
         <Avatar
           src="https://via.placeholder.com/150x150"
           className="gx-size-40 gx-pointer gx-mr-3"

@@ -1,5 +1,5 @@
-import React from "react";
-import { Avatar, Popover } from "antd";
+import React from 'react';
+import {Avatar, Popover} from 'antd';
 
 const UserInfo = () => {
   const userMenuOptions = (
@@ -14,8 +14,7 @@ const UserInfo = () => {
       overlayClassName="gx-popover-horizantal"
       placement="bottomRight"
       content={userMenuOptions}
-      trigger="click"
-    >
+      trigger="click">
       <Avatar
         src="https://via.placeholder.com/150x150"
         className="gx-avatar gx-pointer"

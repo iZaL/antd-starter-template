@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 
-const SearchBox = ({ styleName, placeholder, onChange, value }) => {
+const SearchBox = ({styleName, placeholder, onChange, value}) => {
   return (
     <div className={`gx-search-bar ${styleName}`}>
       <div className="gx-form-group">
@@ -21,6 +21,6 @@ const SearchBox = ({ styleName, placeholder, onChange, value }) => {
 export default SearchBox;
 
 SearchBox.defaultProps = {
-  styleName: "",
-  value: ""
+  styleName: '',
+  value: '',
 };

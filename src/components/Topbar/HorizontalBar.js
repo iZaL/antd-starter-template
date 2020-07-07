@@ -1,15 +1,15 @@
-import React, { useState } from "react";
-import { Button, Dropdown, Layout, Menu, message, Popover, Select } from "antd";
-import Icon from "@ant-design/icons";
-import SearchBox from "components/SearchBox";
-import UserInfo from "components/UserInfo";
-import AppNotification from "components/AppNotification";
-import MailNotification from "components/MailNotification";
-import MenuBar from "components/Topbar/MenuBar";
-import { useRecoilState } from "recoil";
-import drawerStateAtom from "atoms/drawer";
+import React, {useState} from 'react';
+import {Button, Dropdown, Layout, Menu, message, Popover, Select} from 'antd';
+import Icon from '@ant-design/icons';
+import SearchBox from 'components/SearchBox';
+import UserInfo from 'components/UserInfo';
+import AppNotification from 'components/AppNotification';
+import MailNotification from 'components/MailNotification';
+import MenuBar from 'components/Topbar/MenuBar';
+import {useRecoilState} from 'recoil';
+import drawerStateAtom from 'atoms/drawer';
 
-const { Header } = Layout;
+const {Header} = Layout;
 const Option = Select.Option;
 
 const menu = (
@@ -21,7 +21,7 @@ const menu = (
 );
 
 function handleMenuClick(e) {
-  message.info("Click on menu item.");
+  message.info('Click on menu item.');
 }
 
 function handleChange(value) {
@@ -29,24 +29,16 @@ function handleChange(value) {
 }
 
 const HorizontalDefault = () => {
-  const [searchText, setSearchText] = useState("");
+  const [searchText, setSearchText] = useState('');
   const [drawerState, setDrawerState] = useRecoilState(drawerStateAtom);
 
   const languageMenu = () => (
     <div className="gx-popover-lang-scroll">
       <ul className="gx-sub-popover">
-          <li
-            className="gx-media gx-pointer"
-            key={'EN'}
-            onClick={e => {}}
-          >
-            <span className="gx-language-text">EN</span>
-          </li>
-        <li
-          className="gx-media gx-pointer"
-          key={'AR'}
-          onClick={e => {}}
-        >
+        <li className="gx-media gx-pointer" key={'EN'} onClick={e => {}}>
+          <span className="gx-language-text">EN</span>
+        </li>
+        <li className="gx-media gx-pointer" key={'AR'} onClick={e => {}}>
           <span className="gx-language-text">AR</span>
         </li>
       </ul>
@@ -82,20 +74,18 @@ const HorizontalDefault = () => {
             <div className="gx-d-block gx-d-lg-none gx-linebar gx-mr-xs-3">
               <i
                 className="gx-icon-btn icon icon-menu"
-                onClick={() => setDrawerState({open:!drawerState.open})}
+                onClick={() => setDrawerState({open: !drawerState.open})}
               />
             </div>
             <a
               href="/"
-              className="gx-d-block gx-d-lg-none gx-pointer gx-w-logo"
-            >
-              <img alt="" src={require("assets/images/w-logo.png")} />
+              className="gx-d-block gx-d-lg-none gx-pointer gx-w-logo">
+              <img alt="" src={require('assets/images/w-logo.png')} />
             </a>
             <a
               href="/"
-              className="gx-d-none gx-d-lg-block gx-pointer gx-mr-xs-5 gx-logo"
-            >
-              <img alt="" src={require("assets/images/logo.png")} />
+              className="gx-d-none gx-d-lg-block gx-pointer gx-mr-xs-5 gx-logo">
+              <img alt="" src={require('assets/images/logo.png')} />
             </a>
             <div className="gx-header-search gx-d-none gx-d-lg-flex">
               <SearchBox
@@ -107,9 +97,8 @@ const HorizontalDefault = () => {
 
               <Select
                 defaultValue="lucy"
-                style={{ width: 120 }}
-                onChange={handleChange}
-              >
+                style={{width: 120}}
+                onChange={handleChange}>
                 <Option value="jack">Products</Option>
                 <Option value="lucy">Apps</Option>
                 <Option value="Yiminghe">Blogs</Option>
@@ -136,8 +125,7 @@ const HorizontalDefault = () => {
                       />
                     </div>
                   }
-                  trigger="click"
-                >
+                  trigger="click">
                   <span className="gx-pointer gx-d-block">
                     <i className="icon icon-search-new" />
                   </span>
@@ -148,8 +136,7 @@ const HorizontalDefault = () => {
                   overlayClassName="gx-popover-horizantal"
                   placement="bottomRight"
                   content={<AppNotification />}
-                  trigger="click"
-                >
+                  trigger="click">
                   <span className="gx-pointer gx-d-block">
                     <i className="icon icon-notification" />
                   </span>
@@ -161,8 +148,7 @@ const HorizontalDefault = () => {
                   overlayClassName="gx-popover-horizantal"
                   placement="bottomRight"
                   content={<MailNotification />}
-                  trigger="click"
-                >
+                  trigger="click">
                   <span className="gx-pointer gx-status-pos gx-d-block">
                     <i className="icon icon-chat-new" />
                     <span className="gx-status gx-status-rtl gx-small gx-orange" />
@@ -174,8 +160,7 @@ const HorizontalDefault = () => {
                   overlayClassName="gx-popover-horizantal"
                   placement="bottomRight"
                   content={languageMenu()}
-                  trigger="click"
-                >
+                  trigger="click">
                   <span className="gx-pointer gx-flex-row gx-align-items-center">
                     EN
                   </span>

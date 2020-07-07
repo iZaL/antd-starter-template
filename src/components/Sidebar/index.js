@@ -1,17 +1,17 @@
-import React from "react";
-import {Drawer, Layout} from "antd";
-import {useRecoilState} from "recoil";
-import SidebarContent from "components/Sidebar/SidebarContent";
-import drawerStateAtom from "atoms/drawer";
+import React from 'react';
+import {Drawer, Layout} from 'antd';
+import {useRecoilState} from 'recoil';
+import SidebarContent from 'components/Sidebar/SidebarContent';
+import drawerStateAtom from 'atoms/drawer';
 
-const { Sider } = Layout;
+const {Sider} = Layout;
 
 const Sidebar = () => {
   const [drawerState, setDrawerState] = useRecoilState(drawerStateAtom);
 
   const onToggleCollapsedNav = () => {
     setDrawerState({
-      open:!drawerState.open
+      open: !drawerState.open,
     });
   };
 
@@ -22,8 +22,7 @@ const Sidebar = () => {
         placement="left"
         closable={false}
         onClose={onToggleCollapsedNav}
-        visible={drawerState.open}
-      >
+        visible={drawerState.open}>
         <SidebarContent />
       </Drawer>
     </Sider>

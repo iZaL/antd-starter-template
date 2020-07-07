@@ -1,6 +1,6 @@
-import "assets/vendors/gaxon/styles.css";
-import "assets/vendors/noir-pro/styles.css";
-import "styles/wieldy.less";
+import 'assets/vendors/gaxon/styles.css';
+import 'assets/vendors/noir-pro/styles.css';
+import 'styles/wieldy.less';
 // import "assets/css/orange.css";
 
 // document.body.classList.add("dark-theme");

@@ -1,39 +1,32 @@
-import React from "react";
-import { Menu } from "antd";
-import IntlMessages from "util/IntlMessages";
+import React from 'react';
+import {Menu} from 'antd';
+import IntlMessages from 'util/IntlMessages';
 
 const SubMenu = Menu.SubMenu;
 
 const MenuBar = () => {
   return (
-    <Menu
-      defaultOpenKeys={[1]}
-      selectedKeys={[1]}
-      mode="horizontal"
-    >
+    <Menu defaultOpenKeys={[1]} selectedKeys={[1]} mode="horizontal">
       <SubMenu
         // className='gx-menu-horizontal'
         key="main"
-        title={<IntlMessages id="sidebar.main" />}
-      >
+        title={<IntlMessages id="sidebar.main" />}>
         <SubMenu
           className="gx-menu-horizontal"
           key="dashboard"
           title={
             <span>
-              {" "}
+              {' '}
               <i className="icon icon-dasbhoard" />
               <IntlMessages id="sidebar.dashboard" />
             </span>
-          }
-        >
+          }>
           <Menu.Item key="main/dashboard/crypto">
             <a href="/main/dashboard/crypto">
               <i className="icon icon-crypto" />
               <IntlMessages id="sidebar.dashboard.crypto" />
             </a>
           </Menu.Item>
-
         </SubMenu>
 
         <Menu.Item key="main/widgets">
@@ -49,28 +42,24 @@ const MenuBar = () => {
             <IntlMessages id="sidebar.metrics" />
           </a>
         </Menu.Item>
-
       </SubMenu>
 
       <SubMenu
         // className='gx-menu-horizontal'
         key="in-built-apps"
-        title={<IntlMessages id="sidebar.inBuiltApp" />}
-      >
+        title={<IntlMessages id="sidebar.inBuiltApp" />}>
         <Menu.Item key="in-built-apps/mail">
           <a href="/in-built-apps/mail">
             <i className="icon icon-email" />
             <IntlMessages id="sidebar.mailApp" />
           </a>
         </Menu.Item>
-
       </SubMenu>
 
       <SubMenu
         // className='gx-menu-horizontal'
         key="components"
-        title={<IntlMessages id="sidebar.components" />}
-      >
+        title={<IntlMessages id="sidebar.components" />}>
         <SubMenu
           className="gx-menu-horizontal"
           key="general"
@@ -79,8 +68,7 @@ const MenuBar = () => {
               <i className="icon icon-all-contacts" />
               <IntlMessages id="sidebar.components.general" />
             </span>
-          }
-        >
+          }>
           <Menu.Item key="components/general/button">
             <a href="/components/general/button">
               <IntlMessages id="sidebar.general.button" />
@@ -101,8 +89,7 @@ const MenuBar = () => {
               <i className="icon icon-navigation" />
               <IntlMessages id="sidebar.components.navigation" />
             </span>
-          }
-        >
+          }>
           <Menu.Item key="components/navigation/affix">
             <a href="/components/navigation/affix">
               <IntlMessages id="sidebar.navigation.affix" />
@@ -113,9 +100,7 @@ const MenuBar = () => {
               <IntlMessages id="sidebar.navigation.breadcrumb" />
             </a>
           </Menu.Item>
-
         </SubMenu>
-
 
         <SubMenu
           className="gx-menu-horizontal"
@@ -125,21 +110,14 @@ const MenuBar = () => {
               <i className="icon icon-feedback" />
               <IntlMessages id="sidebar.components.feedBack" />
             </span>
-          }
-        >
+          }>
           <Menu.Item key="components/feedBack/alert">
             <a href="/components/feedBack/alert">
               <IntlMessages id="sidebar.feedBack.alert" />
             </a>
           </Menu.Item>
-
         </SubMenu>
-
-
       </SubMenu>
-
-
-
     </Menu>
   );
 };
