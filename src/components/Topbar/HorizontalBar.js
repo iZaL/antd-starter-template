@@ -92,7 +92,7 @@ const HorizontalDefault = () => {
               <img alt="" src={require("assets/images/w-logo.png")} />
             </a>
             <a
-              to="/"
+              href="/"
               className="gx-d-none gx-d-lg-block gx-pointer gx-mr-xs-5 gx-logo"
             >
               <img alt="" src={require("assets/images/logo.png")} />
