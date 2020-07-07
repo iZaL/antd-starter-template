@@ -4,7 +4,7 @@ import IntlMessages from "util/IntlMessages";
 
 const SubMenu = Menu.SubMenu;
 
-const HorizontalNav = () => {
+const MenuBar = () => {
   return (
     <Menu
       defaultOpenKeys={[1]}
@@ -144,6 +144,6 @@ const HorizontalNav = () => {
   );
 };
 
-HorizontalNav.propTypes = {};
+MenuBar.propTypes = {};
 
-export default HorizontalNav;
+export default MenuBar;

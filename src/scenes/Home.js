@@ -1,7 +1,7 @@
 import React from "react";
 import { Layout } from "antd";
-import HorizontalDefault from "Topbar/HorizontalDefault";
-import Sidebar from "Sidebar/index";
+import HorizontalDefault from "components/Topbar/HorizontalBar";
+import Sidebar from "components/Sidebar/index";
 
 const { Content, Footer } = Layout;
 

@@ -5,51 +5,13 @@ import SearchBox from "components/SearchBox";
 import UserInfo from "components/UserInfo";
 import AppNotification from "components/AppNotification";
 import MailNotification from "components/MailNotification";
-import HorizontalNav from "Topbar/HorizontalNav";
+import MenuBar from "components/Topbar/MenuBar";
 import { useRecoilState } from "recoil";
 import drawerStateAtom from "atoms/drawer";
 
-const languageData = [
-  {
-    languageId: "english",
-    locale: "en",
-    name: "English",
-    icon: "us"
-  },
-  {
-    languageId: "chinese",
-    locale: "zh",
-    name: "Chinese",
-    icon: "cn"
-  },
-  {
-    languageId: "spanish",
-    locale: "es",
-    name: "Spanish",
-    icon: "es"
-  },
-  {
-    languageId: "french",
-    locale: "fr",
-    name: "French",
-    icon: "fr"
-  },
-  {
-    languageId: "italian",
-    locale: "it",
-    name: "Italian",
-    icon: "it"
-  },
-  {
-    languageId: "saudi-arabia",
-    locale: "ar",
-    name: "Arabic",
-    icon: "sa"
-  }
-];
-
 const { Header } = Layout;
 const Option = Select.Option;
+
 const menu = (
   <Menu onClick={handleMenuClick}>
     <Menu.Item key="1">Products</Menu.Item>
@@ -229,7 +191,7 @@ const HorizontalDefault = () => {
       <div className="gx-header-horizontal-nav gx-d-none gx-d-lg-block">
         <div className="gx-container">
           <div className="gx-header-horizontal-nav-flex">
-            <HorizontalNav />
+            <MenuBar />
             <ul className="gx-header-notifications gx-ml-auto">
               <li>
                 <span className="gx-pointer gx-d-block">

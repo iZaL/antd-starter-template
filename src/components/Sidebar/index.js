@@ -1,7 +1,7 @@
 import React from "react";
 import {Drawer, Layout} from "antd";
 import {useRecoilState} from "recoil";
-import SidebarContent from "Sidebar/SidebarContent";
+import SidebarContent from "components/Sidebar/SidebarContent";
 import drawerStateAtom from "atoms/drawer";
 
 const { Sider } = Layout;
